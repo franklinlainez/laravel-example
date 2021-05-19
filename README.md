@@ -64,5 +64,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # laravel-example
  - Paso 1 : Instalar laravel de forma global: composer global require laravel/installer 
  - Paso 2 : Crear una nueva app de laravel: laravel new $nombreProyecto - (Alternartivo): composer create-project --prefer-dist laravel/laravel $nombreProyecto
-   
-  
+ - composer dump-autoload // Genera nuevamente
+ - php artisan list
