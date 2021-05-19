@@ -10,18 +10,7 @@
 <body>
 <h1>Products</h1>
 <p>
-    {{ $title }}
+    {{ $products }}
 </p>
-<p>
-    {{ $description }}
-</p>
-<ul>
-    @foreach($data as $item)
-        <li>
-            {{ $item }}
-        </li>
-    @endforeach
-
-</ul>
 </body>
 </html>
