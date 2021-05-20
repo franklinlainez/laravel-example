@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,6 @@ use App\Http\Controllers\ProductsController;
 */
 
 //Name a route
-Route::get('/products',
-    [ProductsController::class, 'index'])->name('products');
-
+Route::get('/',
+    [PagesController::class, 'index']);
+Route::get('/about',[PagesController::class,'about']);

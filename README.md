@@ -66,3 +66,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  - Paso 2 : Crear una nueva app de laravel: laravel new $nombreProyecto - (Alternartivo): composer create-project --prefer-dist laravel/laravel $nombreProyecto
  - composer dump-autoload // Genera nuevamente
  - php artisan list
+ - php artisan make:controller $controllerName
+ - php artisan storage:link // crea un link al sotrage... ?que es storage?
