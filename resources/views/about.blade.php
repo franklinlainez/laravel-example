@@ -1,16 +1,19 @@
-<!--
-    Comparing multiple possible conditions
-    Multiple values that may require the same code
--->
+@for($i=0; $i<10; $i++)
+    <h2>Number is {{$i}}</h2>
+@endfor
 
-@switch($name)
-    @case('Frank')
-    <h2>Name is Frank</h2>
-        @break
-    @case('Lol')
-    <h2>Name is lol</h2>
-    @break
+@foreach($names as $name)
+    <h3>Name is {{$name}}</h3>
+@endforeach
 
-    @default
-    <h2>No name provided</h2>
-@endswitch
+@forelse($names as $name)
+    <h2>The name is {{$name}}</h2>
+@empty
+    <h2>There are no names</h2>
+@endforelse
+
+{{$i=0}}
+@while($i < 10)
+    <h2>{{$i}}</h2>
+    {{$i++}}
+@endwhile
