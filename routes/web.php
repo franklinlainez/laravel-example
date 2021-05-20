@@ -14,17 +14,7 @@ use App\Http\Controllers\ProductsController;
 |
 */
 
-//Laravel 8 (New)
-Route::get('/products', [ProductsController::class, 'index']);
-Route::get('/products/about', [ProductsController::class, 'about']);
+//Name a route
+Route::get('/products',
+    [ProductsController::class, 'index'])->name('products');
 
-//Route params
-// "where" validates our param
-//Route::get('/products/{id}', [ProductsController::class, 'show'])
-//    ->where('id', '[0-9]+');
-
-Route::get('/products/{name}/{id}', [ProductsController::class, 'show'])
-    ->where([
-        'name' => '[a-z]+',
-        'id' => '[0-9]+'
-    ]);
