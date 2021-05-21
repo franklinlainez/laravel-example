@@ -15,17 +15,7 @@ class CarsController extends Controller
      */
     public function index()
     {
-        // Select * from cars
-        $cars = Car::all();
-//        $cars = \App\Models\Car::where('name', '=', 'Ford')
-//            ->firstOrFail();
-
-//        \print_r(\App\Models\Car::where('name', '=', 'Ford')->count());
-//        $cars = \App\Models\Car::chunk(2,function($cars){
-//            foreach ($cars as $car) {
-//                \print_r($car);
-//           }
-//        });
+        $cars = Car::all()->toArray();
 
         return view('cars.index', ['cars' => $cars]);
     }
