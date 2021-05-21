@@ -78,3 +78,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  - php artisan migrate:install
  - php artisan migrate:reset
  - php artisan migrate:refresh
+ - php artisan make:factory PostFactory --model=Post  // Fill with data // --model specify a model
+ - php artisan tinker 
+ -- \App\Models\Post::factory()->create();
+ -- \App\Models\Post::factory()->count(2)->create();
