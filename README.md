@@ -72,3 +72,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  - composer require laravel-frontend-presets/tailwindcss --dev
  - php artisan ui tailwindcss
  - npm run dev
+ - migrations: version control for database
+ - php artisan make:model Post -m // make a model and a migartion
+ - php artisan migrate
+ - php artisan migrate:install
+ - php artisan migrate:reset
+ - php artisan migrate:refresh
