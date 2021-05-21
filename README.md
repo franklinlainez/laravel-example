@@ -82,3 +82,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  - php artisan tinker 
  -- \App\Models\Post::factory()->create();
  -- \App\Models\Post::factory()->count(2)->create();
+ - php artisan makeController CarsController --resource -> implements crud and create resource -> using a resource, pulls all related routes into the controller
+ - php artisan route:list 

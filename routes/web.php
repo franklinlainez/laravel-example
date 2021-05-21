@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
@@ -15,9 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Name a route
-Route::get('/',
-    [PagesController::class, 'index']);
-Route::get('/about', [PagesController::class, 'about']);
-
-Route::get('/posts', [PostsController::class, 'index']);
+Route::resource('/cars', CarsController::class);
