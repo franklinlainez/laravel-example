@@ -68,3 +68,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  - php artisan list
  - php artisan make:controller $controllerName
  - php artisan storage:link // crea un link al sotrage... ?que es storage?
+ - npm run watch // watch for our file changes
+ - composer require laravel-frontend-presets/tailwindcss --dev
+ - php artisan ui tailwindcss
+ - npm run dev
