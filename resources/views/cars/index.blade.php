@@ -28,13 +28,15 @@
                     </form>
                 </div>
                 <span>
-                Founded:
+                Founded: {{$car->founded}}
             </span>
                 <h2>
-
+                    <a href="/cars/{{$car->id}}">
+                        {{$car->name}}
+                    </a>
                 </h2>
                 <p>
-
+                    {{$car->description}}
                 </p>
 
                 <hr>

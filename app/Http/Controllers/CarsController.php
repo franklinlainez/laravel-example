@@ -15,7 +15,7 @@ class CarsController extends Controller
      */
     public function index()
     {
-        $cars = Car::all()->toArray();
+        $cars = Car::all();
 
         return view('cars.index', ['cars' => $cars]);
     }
@@ -61,9 +61,10 @@ class CarsController extends Controller
      * @param int $id
      * @return Response
      */
-    public function show($id)
+    public function show(Car $car)
     {
         //
+        return view('cars.show')->with('car', $car);
     }
 
     /**
