@@ -17,18 +17,43 @@
                 {{$car->description}}
             </p>
             <hr class="mt-4 mb-8">
-            <p class="text-lg text-gray-700 py-3">
-                Models
-            </p>
-            <ul>
-                @forelse($car->carModels as $model)
-                    <li class="inline italic text-gray-600 px-1 py-6">
-                        {{$model['model_name']}}
-                    </li>
+            <table class="table-auto">
+                <tr class="bg-blue-100">
+                    <th class="w-1/4 border-4 border-gray-500">
+                        Model
+                    </th>
+                    <th class="w-1/4 border-4 border-gray-500">
+                        Engines
+                    </th>
+                    <th class="w-1/4 border-4 border-gray-500">
+                        Created
+                    </th>
+                </tr>
+                @forelse ($car->carModels as $model)
+                    <tr>
+                        <td class="border-4 border-gray-500">
+                            {{$model->model_name}}
+                        </td>
+                        <td class="border-4 border-gray-500">
+                            @foreach($car->engines as $engine)
+                                @if($model->id === $engine->model_id)
+                                    {{$engine->engine_name}}
+                                @endif
+                            @endforeach
+                        </td>
+                        <td class="border-4 border-gray-500">
+                        {{date('d-m-Y',strtotime($car->productionDate->created_at))}}
+                        <td>
+                    </tr>
                 @empty
-                    <li></li>
+                    <tr>
+                        <td>
+                            <p>No cars founded</p>
+                        </td>
+                    </tr>
                 @endforelse
-            </ul>
+
+            </table>
         </div>
     </div>
 @endsection
