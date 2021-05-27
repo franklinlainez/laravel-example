@@ -64,6 +64,7 @@ class CarsController extends Controller
     public function show(Car $car)
     {
         //
+        \var_dump($car->products());
         return view('cars.show')->with('car', $car);
     }
 
